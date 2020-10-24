@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{font-family: arial;}
+        h1{font-size: 25px;}
+        #box1{
+            background: lightgreen;
+          padding: 10px;
+          border: 1px solid #000;
+        }
+        #box2{
+            background: lightpink;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+        </style>
+</head>
+<body>
+    <h1>jquery append and prepend,after and before method</h1>
+    <div id="box1">
+    <h2>Test Box</h2>
+    <p>Lorem ipsum <span>dolor sit amet</span>, consectetur adipisicing elit. Mollitia,laudantium.</p>
+    <p>Lorem ipsum <span>dolor sit amet</span>, consectetur adipisicing elit. Mollitia,laudantium.</p>
+    <p>Lorem ipsum <span>dolor sit amet</span>, consectetur adipisicing elit. Mollitia,laudantium.</p>
+    </div>
+    <br>
+    <div id="box2">
+        <p>This is anather div</p>
+        </div><br>
+        <button id="cloneBtn">cline</button>
+        <button id="replaceBtn">replace</button>
+
+        <script src="js/jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#cloneBtn').click(function(){
+                    $('#box1 h2').clone().prependTo('#box2');
+                });
+            });
+            $(document).ready(function(){
+            $('#replaceBtn').click(function(){
+                    //$('#box1 p:first').replaceWith("<h3>hello komal</h3>");
+                    $("<h3>hello google</h3>").replaceAll('#box1 p:first');
+                });
+            });
+        </script>
+</body>
+</html>

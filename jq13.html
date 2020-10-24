@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{font-family: arial;}
+        h1{font-size: 25px;}
+        #box{
+            background: lightgreen;
+          padding: 10px;
+          border: 1px solid #000;
+        }
+        </style>
+</head>
+<body>
+    <h1>jquery append and prepend,after and before method</h1>
+    <div id="box">
+    <h2>Test Box</h2>
+    <p>Lorem ipsum <span>dolor sit amet</span>, consectetur adipisicing elit. Mollitia,laudantium.</p>
+    </div>
+    <br>
+    <button id="appendBtn">append</button>
+    <button id="prependBtn">prepend</button><br>
+    <button id="afterdBtn">after</button>
+    <button id="beforeBtn">before</button>
+    <button id="emptyBtn">empty</button>
+    <button id="removeBtn">remove</button>
+
+    <script src="js/jquery.js"></script>
+    <script>
+       $(document).ready(function(){
+           $("#appendBtn").click(function(){
+               $('#box').append("<h2>hello aman</h2>");
+           });
+           $("#prependBtn").click(function(){
+               $('#box').prepend("<h2>hello aman</h2>");
+           });
+           $("#afterBtn").click(function(){
+               $('#box').after("<h2>flower</h2>");
+           });
+           $("#beforeBtn").click(function(){
+               $('#box').before("<h2>nature</h2>");
+           });
+           $("#emptyBtn").click(function(){
+               $('#box').empty();
+           });
+           $("#removeBtn").click(function(){
+               $('#box').remove();
+           });
+       });
+    </script>
+</body>
+</html>
