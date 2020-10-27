@@ -1,0 +1,33 @@
+<html>
+<head>
+<title> jQuery is() method </title>
+</head>
+
+<body>
+<h2> It is an example of using the jQuery is() method. </h2>
+<h3> Click the following span elements to see the effect. </h3>
+<span id = "s1"> Click me </span> </br>
+<span id = "s2"> Click me </span> </br>
+<span id = "s3"> Click me </span> </br>
+
+<script src = "js/jquery.js"> </script>
+
+<script>
+$(document).ready(function() {
+$("span").click(function () {
+if ($(this).is("#s1")) {
+$("#s1").text("This is first span element").css({"background-color": "yellow", "font-size": "20px"});
+}
+else if ($(this).is("#s2")) {
+$("#s2").text("This is second span element").css({"background-color": "orange", "font-size": "20px"});
+}
+else {
+$("#s3").text("This is third span element").css({"background-color": "lightblue", "font-size": "20px"});
+}
+});
+
+});
+</script>
+
+</body>
+</html>

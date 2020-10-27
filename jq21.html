@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{font-family: arial;}
+        h1{font-size: 25px;}
+        #box{
+            background: lightgreen;
+          padding: 10px;
+          border: 1px solid #000;
+        }
+        </style>
+</head>
+<body>
+    <h1>jquery hide and show method</h1>
+    <div id="box">
+    <h2>Test Box</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia,laudantium.</p>
+    </div>
+    <br>
+    <button id="slideupBtn">slideup</button>
+    <button id="slidedownBtn">slidedown</button>
+    <button id="slidetoggleBtn">slidetoggle</button>
+
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#slideupBtn').click(function(){
+              $('#box').slideUp("slow");
+            });
+           $('#slidedownBtn').click(function(){
+              $('#box').slideDown("fast");
+            });
+            $('#slidetoggleBtn').click(function(){
+              $('#box  p').slideToggle(2000);
+            });
+        });
+        </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> jQuery each() method </title>
+</head>
+<body>
+<h2> Welcome to the javaTpoint.com </h2>
+<ul>
+<li> First element </li>
+<li> Second element </li>
+<li> Third element </li>
+<li> Fourth element </li>
+</ul>
+<p>
+Click the following button to see the list of <b> li </b> elements.
+</p>
+<button onclick = fun()> Click me </button>
+
+<script src="js/jquery.js"></script>
+<script>
+function fun(){
+$(document).ready(function(){
+$("li").each(function(){
+alert($(this).text())
+});
+});
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{font-family: arial;}
+        h1{font-size: 25px;}
+        #box{
+            background: lightgreen;
+          padding: 10px;
+          border: 1px solid #000;
+        }
+        </style>
+</head>
+<body>
+    <h1>jquery target property</h1>
+    <div id="box">
+    <h2>Test Box</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia,laudantium.</p>
+    <button id="slideupBtn">slideup</button>
+    </div>
+    <br>
+    <h3></h3>
+
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#box').on("click",function(){
+                $('h3').html("target element:"+event.target.nodename);
+            });
+        });
+    </script>
+    
+</body>
+</html>
